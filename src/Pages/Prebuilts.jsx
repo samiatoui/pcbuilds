@@ -1,21 +1,9 @@
-import { Link } from "react-router-dom";
-function Home() {
+function Prebuilts() {
     return (
         <>
-            <div className="banner">
-                <div className="bannercontent">
-                    <h1>Welcome to our website</h1>
-                    <h3>A generic company info.</h3>
-                </div>
-
-            </div>
-
-
-            <h1>Computer Build and Repair Services in Winnipeg</h1>
             <div className="services-sec">
                 <div className="service-item">
-                    <Link to="prebuilts">                    <h2>PC Builds</h2>
-                    </Link>
+                    <h2>PC Builds</h2>
                     <ul>
                         <li>Prebuilt Models</li>
                         <li>Custom Build</li>
@@ -34,9 +22,8 @@ function Home() {
                 </div>
 
             </div>
-
         </>
     );
 }
 
-export default Home;
+export default Prebuilts;

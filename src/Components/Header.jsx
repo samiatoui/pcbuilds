@@ -9,8 +9,7 @@ function Header() {
     return (
         <header className="header">
             <div className="header-content">
-                <h1>Test</h1>
-
+                <img style={{ maxWidth:"250px", padding: "0"}} src="https://i.imgur.com/JqR9x68.png"></img>
                 {/* Hamburger Icon */}
                 <button
                     className="hamburger"
@@ -27,10 +26,16 @@ function Header() {
                             </Link>
                         </li>
                         <li>
+                            <Link to="prebuilts" onClick={() => setMenuOpen(false)}>
+                                Gaming PC
+                            </Link>
+                        </li>
+                        <li>
                             <Link to="contact" onClick={() => setMenuOpen(false)}>
                                 Contact
                             </Link>
                         </li>
+                        
                     </ul>
                 </nav>
 
@@ -39,6 +44,9 @@ function Header() {
                     <ul>
                         <li>
                             <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="prebuilts">Gaming PC</Link>
                         </li>
                         <li>
                             <Link to="contact">Contact</Link>

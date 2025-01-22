@@ -4,6 +4,7 @@ import Header from './Components/Header'
 import Contact from './Pages/Contact'
 import Home from './Pages/Home';
 import Footer from './Components/Footer';
+import Prebuilts from './Pages/Prebuilts';
 function App() {
 
   return (
@@ -13,6 +14,8 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="prebuilts" element={<Prebuilts />} />
+
         <Route path="contact" element={<Contact />} />
       </Routes>
       <footer>
