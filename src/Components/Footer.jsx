@@ -3,8 +3,8 @@ function Footer() {
         <>
             <div className="footer-main">
                 <div className="footer-left">
-                    <h1>chaqradesigns.</h1>
-                    Luscious Orange is a creative agency specializing in design, strategy, and web development. Based in Winnipeg, Manitoba, our team works closely, collaboratively, and completely remotely with customers near and far.
+                    <img style={{ maxWidth: "400px", padding: "0" }} src="https://i.imgur.com/JqR9x68.png"></img>
+
                 </div>
                 <div className="footer-right">
                     <h3>Get in Touch</h3>
@@ -12,8 +12,9 @@ function Footer() {
                     <div>  SOCIAL ICONS </div>
                 </div>
             </div>
-            <div style={{ backgroundColor:"black", color: "white", padding: "25px 10px"}}>
-                Copyright chaqradesigns. 2025
+            <div style={{ backgroundColor: "black", color: "white", padding: "25px 10px" }}>
+                Copyright © 2025. Sami PC Builds. All rights reserved.
+
             </div>
         </>
     )
