@@ -1,0 +1,314 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 1.2em;
+  line-height: 1.1;
+}
+
+:root {
+  --header-color: white;
+  --header-text: black;
+  --accent-color: linear-gradient(90deg, rgba(0, 119, 255, 1) 0%, rgb(2, 187, 224) 100%);
+  --accent-colorflat: rgb(0, 119, 255);
+
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--header-text);
+}
+
+a:hover {
+  color: rgb(173, 173, 173);
+}
+
+.header {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.65);
+  background-color: var(--header-color);
+  height: 75px;
+  width: 100%;
+  /* Keep full-screen width for the header */
+  display: flex;
+  align-items: center;
+  color: var(--header-text);
+  position: relative;
+}
+
+.header-content {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--header-text);
+
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  background-color: var(--header-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 1000;
+  padding-right: 50px;
+  text-align: left;
+}
+
+.nav-menu.open {
+  display: block;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: var(--header-text);
+}
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.desktop-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.desktop-menu ul li a {
+  text-decoration: none;
+  color: var(--header-text);
+}
+
+.services-sec {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  text-align: center;
+  gap: 2rem;
+}
+
+.services-sec ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services-sec li {
+  padding: 5px 0px;
+}
+
+.service-item {
+  text-align: left;
+  max-width: 600px;
+  padding: 20px 25px;
+  background: var(--accent-color);
+  color: white;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  background: var(--accent-color);
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  font-size: 18px;
+}
+
+.banner {
+  background-color: var(--accent-colorflat);
+  margin-bottom: 50px;
+  background-image: url('https://img.freepik.com/free-photo/3d-rendering-business-meeting-working-room-office-building_105762-1972.jpg?t=st=1736442180~exp=1736445780~hmac=83e23733fd4afd0734d07d7520ca0e4144747672836a11dbbe54ebf375751b34&w=1380');
+  background-size: cover;
+  /* Ensures the image covers the element */
+  background-position: center;
+  /* Centers the image */
+  min-height: 300px;
+}
+
+.bannercontent {
+  background-color: black;
+  color: white;
+  opacity: 0.7;
+  margin: 0 auto;
+  padding: 100px 60px;
+
+}
+
+.bannerv2 {
+  display: flex;
+  max-width: 1280px;
+  justify-content: center;
+  margin: 0 auto 50px auto;
+  gap: 2rem;
+}
+
+.bannerv3 {
+  background: var(--accent-color);
+  display: flex;
+  padding: 25px 50px;
+  justify-content: center;
+  margin: 0 auto 50px auto;
+}
+
+.bannerv3 .bannertext {
+  max-width: 50%;
+  text-align: left;
+  padding: 100px 0px;
+}
+
+.bannerv3 .bannerimg img {
+  padding-left: 100px;
+  max-width: 50%;
+}
+
+.bannerimg img {
+  max-width: 40em;
+
+}
+
+.bannerimg {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.bannertext {
+  margin: 0 auto;
+  max-width: 90%;
+  text-align: left;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  gap: 2rem;
+  padding: 50px 25px;
+  color: white;
+  max-width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+footer{
+  background-color: rgb(23, 23, 23);
+}
+
+.footer-left {
+  max-width: 50%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+    /* Hide desktop menu on small screens */
+  }
+
+  .hamburger {
+    display: block;
+    /* Show hamburger icon */
+  }
+
+  .services-sec {
+    display: block;
+    margin: 0 auto;
+
+  }
+
+  .service-item {
+    max-width: 60%;
+    padding: 10px 25px;
+    margin: 25px auto;
+  }
+
+  .header-content {
+    padding-left: 10px;
+
+  }
+
+  .bannerv2 {
+    display: block;
+  }
+
+  .banner {
+    max-width: 768px;
+  }
+
+  .bannerimg img {
+    max-width: 25em;
+
+  }
+
+  .bannerv3 {
+    display: block;
+  }
+
+  .bannerv3 .bannerimg img {
+    padding: 0;
+  }
+
+  .bannerv3 .bannertext {
+    max-width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .footer-main{
+    display: block;
+  }
+  .footer-left{
+    max-width: 100%;
+  }
+}
+
+
+/* Show desktop menu and hide hamburger on large screens */
+@media (min-width: 769px) {
+  .desktop-menu {
+    display: flex;
+    /* Show desktop menu on large screens */
+  }
+
+  .hamburger {
+    display: none;
+    /* Hide hamburger icon */
+
+  }
+}
