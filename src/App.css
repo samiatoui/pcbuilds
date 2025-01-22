@@ -153,7 +153,7 @@ button {
 .banner {
   background-color: var(--accent-colorflat);
   margin-bottom: 50px;
-  background-image: url('https://img.freepik.com/free-photo/3d-rendering-business-meeting-working-room-office-building_105762-1972.jpg?t=st=1736442180~exp=1736445780~hmac=83e23733fd4afd0734d07d7520ca0e4144747672836a11dbbe54ebf375751b34&w=1380');
+  background-image: url('https://imgs.search.brave.com/LQExczDEyLRxLEKLeZqA53VuDM_CIq1wAeSkxddO0j8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDQ1ODUw/MzMuanBn');
   background-size: cover;
   /* Ensures the image covers the element */
   background-position: center;

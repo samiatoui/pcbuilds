@@ -4,8 +4,8 @@ function Home() {
         <>
             <div className="banner">
                 <div className="bannercontent">
-                    <h1>Welcome to our website</h1>
-                    <h3>A generic company info.</h3>
+                    <h1>Sami PC Builds</h1>
+                    <h3>Computer builds and repairs</h3>
                 </div>
 
             </div>
@@ -24,7 +24,9 @@ function Home() {
 
                 </div>
                 <div className="service-item">
-                    <h2>Repair Service</h2>
+                    <Link to="services">
+                        <h2>Repair Service</h2>
+                    </Link>
                     <ul>
                         <li>Diagnostic</li>
                         <li>OS Reinstallation</li>

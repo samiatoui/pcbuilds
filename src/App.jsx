@@ -5,6 +5,7 @@ import Contact from './Pages/Contact'
 import Home from './Pages/Home';
 import Footer from './Components/Footer';
 import Prebuilts from './Pages/Prebuilts';
+import Service from './Pages/Service';
 function App() {
 
   return (
@@ -15,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="prebuilts" element={<Prebuilts />} />
-
+        <Route path="services" element={<Service />} />
         <Route path="contact" element={<Contact />} />
       </Routes>
       <footer>

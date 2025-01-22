@@ -1,6 +1,8 @@
 function Prebuilts() {
     return (
         <>
+            <h1 style={{}}>Prebuilt Gaming PC</h1>
+
             <div className="services-sec">
                 <div className="service-item">
                     <h2>PC Builds</h2>
