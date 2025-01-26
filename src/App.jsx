@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import Footer from './Components/Footer';
 import Prebuilts from './Pages/Prebuilts';
 import Service from './Pages/Service';
+import Admin from './Pages/Admin';
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="prebuilts" element={<Prebuilts />} />
         <Route path="services" element={<Service />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
       <footer>
         <Footer />
