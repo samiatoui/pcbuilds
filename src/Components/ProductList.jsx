@@ -9,7 +9,7 @@ const ProductList = () => {
     useEffect(() => {
       const fetchProducts = async () => {
         try {
-          const response = await fetch('http://localhost:5001/api/products');
+          const response = await fetch('https://backend-flame-gamma.vercel.app/api/products');
           if (!response.ok) {
             throw new Error('Failed to fetch products');
           }

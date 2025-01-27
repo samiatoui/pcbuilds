@@ -19,7 +19,8 @@ function App() {
         <Route path="prebuilts" element={<Prebuilts />} />
         <Route path="services" element={<Service />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="/cms" element={<Admin />} />
+        <Route path="cms" element={<Admin />} />
+
       </Routes>
       <footer>
         <Footer />
