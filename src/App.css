@@ -4,6 +4,12 @@
   width: 100%;
 }
 
+.pagetitle{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 50px;
+  text-align: left;
+}
 .service-item a {
   color: white !important;
 }

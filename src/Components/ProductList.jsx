@@ -37,6 +37,7 @@ const ProductList = () => {
     return (
       <div>
         <h1>Product List</h1>
+        
         {products.length === 0 ? (
           <p>No products available</p>
         ) : (
@@ -48,6 +49,7 @@ const ProductList = () => {
                 <th>Description</th>
                 <th>Price</th>
                 <th>Stock Quantity</th>
+                <th>Images</th>
               </tr>
             </thead>
             <tbody>
@@ -58,6 +60,15 @@ const ProductList = () => {
                   <td>{product.description}</td>
                   <td>${product.price}</td>
                   <td>{product.stock_quantity}</td>
+                  <td>
+                    <div style={{ display: 'flex', gap: '5px', flexWrap: 'wrap' }}>
+                      {[product.img_url_1, product.img_url_2, product.img_url_3, product.img_url_4]
+                        .filter(url => url) // Filter out empty or null URLs
+                        .map((url, index) => (
+                          <img key={index} src={url} alt={`Product ${product.name}`} width="50" height="50" style={{ borderRadius: '5px' }} />
+                        ))}
+                    </div>
+                  </td>
                 </tr>
               ))}
             </tbody>
