@@ -39,7 +39,7 @@ const Product = () => {
             <img src={product.img_url_1} alt={product.name} style={{ width: '200px', objectFit: 'cover' }} />
             <h3>{product.name}</h3>
             <p>${product.price}</p>
-            <Link to={`/product/${product.product_id}`}>
+            <Link to={`/prebuilts/${product.product_id}`}>
               <button style={{ display: 'block', margin: '0 auto' }}>See Details</button>
             </Link>
           </div>

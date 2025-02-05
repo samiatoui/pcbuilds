@@ -8,6 +8,7 @@ import Prebuilts from './Pages/Prebuilts';
 import Service from './Pages/Service';
 import Admin from './Pages/Admin';
 import ProductDetail from './Components/ProductDetails';
+import { AddToCart } from './Components/AddToCart';
 function App() {
 
   return (
@@ -21,7 +22,8 @@ function App() {
         <Route path="services" element={<Service />} />
         <Route path="contact" element={<Contact />} />
         <Route path="cms" element={<Admin />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/prebuilts/:id" element={<ProductDetail />} />
+        <Route path="/checkout"  element={<AddToCart />} />
 
       </Routes>
       <footer>

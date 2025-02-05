@@ -39,12 +39,14 @@ const ProductList = () => {
         const { name, value } = e.target;
         setEditedProduct((prevProduct) => ({
             ...prevProduct,
-            [name]: value,
+            [name]: name === "product_level" ? String(value) : value, // Ensure product_level is a string
         }));
     };
 
     // Save the changes to the backend
     const handleSave = async () => {
+        console.log("Sending data to backend:", editedProduct); // Debugging log
+
         try {
             const response = await fetch(`https://backend-flame-gamma.vercel.app/api/products/${editedProduct.product_id}`, {
                 method: 'PUT',
@@ -99,6 +101,7 @@ const ProductList = () => {
                             <th>Price</th>
                             <th>Stock Quantity</th>
                             <th>Images</th>
+                            <th>Level</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -187,6 +190,23 @@ const ProductList = () => {
                                                 </div>
                                             ))}
                                     </div>
+                                </td>
+
+                                <td>
+                                    {editingProductId === product.product_id ? (
+                                        <select
+                                            name="product_level"
+                                            value={editedProduct.product_level ?? ""} // Use empty string if null
+                                            onChange={handleChange}
+                                        >
+                                            <option value="">Select Level</option>
+                                            <option value="Entry Level">Entry Level</option>
+                                            <option value="Mid Range">Mid Range</option>
+                                            <option value="High End">High End</option>
+                                        </select>
+                                    ) : (
+                                        product.product_level || "Not Set" // Show "Not Set" if null
+                                    )}
                                 </td>
 
 

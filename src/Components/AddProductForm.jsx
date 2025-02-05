@@ -10,6 +10,7 @@ function AddProductForm() {
     img_url_2: '',
     img_url_3: '',
     img_url_4: '',
+    product_level: 'Entry Level',
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -37,6 +38,7 @@ function AddProductForm() {
       img_url_2: productData.img_url_2 || null,
       img_url_3: productData.img_url_3 || null,
       img_url_4: productData.img_url_4 || null,
+      product_level: productData.product_level
     };
 
     console.log('After conversion:', productPayload);
@@ -161,6 +163,14 @@ function AddProductForm() {
             value={productData.img_url_4}
             onChange={handleChange}
           />
+        </div>
+        <div>
+          <label>Product Level</label>
+          <select name="product_level" value={productData.product_level} onChange={handleChange}>
+            <option value="Entry Level">Entry Level</option>
+            <option value="Mid Range">Mid Range</option>
+            <option value="High End">High End</option>
+          </select>
         </div>
         <button type="submit" disabled={loading}>
           {loading ? 'Adding...' : 'Add Product'}
