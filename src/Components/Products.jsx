@@ -30,17 +30,20 @@ const Product = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '50px' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '50px', maxWidth:'1200px', flexWrap:'wrap', lineHeight:'18px' }}>
       {products.length === 0 ? (
         <p>No products available</p>
       ) : (
         products.map((product) => (
-          <div key={product.product_id} style={{ border: 'solid 1px grey', borderRadius: '3px', padding: '25px', textAlign: 'left' }}>
+          <div key={product.product_id} style={{ padding: '25px', textAlign: 'left' }}>
             <img src={product.img_url_1} alt={product.name} style={{ width: '200px', objectFit: 'cover' }} />
-            <h3>{product.name}</h3>
-            <p>${product.price}</p>
+            <div style={{ display: 'flex', justifyContent: 'space-between'}}>
+              <h3 style={{fontSize: '16px'}}>{product.name}</h3>
+              <p>${product.price}</p>
+            </div>
+
             <Link to={`/prebuilts/${product.product_id}`}>
-              <button style={{ display: 'block', margin: '0 auto' }}>See Details</button>
+              <button style={{ display: 'block', margin: '0 auto', width: '100%', borderRadius: '0' }}>Buy Now</button>
             </Link>
           </div>
         ))

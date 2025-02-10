@@ -11,7 +11,7 @@ function Header() {
             <div className="header-content">
                 <Link to="/">
 
-                    <img style={{ maxWidth: "250px", padding: "0" }} src="https://i.imgur.com/JqR9x68.png"></img>
+                    <img style={{ maxWidth: "250px", padding: "0" }} src="https://i.imgur.com/EGE9b1b.png"></img>
                 </Link>
                 {/* Hamburger Icon */}
                 <button

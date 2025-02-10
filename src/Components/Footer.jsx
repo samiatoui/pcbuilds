@@ -3,7 +3,7 @@ function Footer() {
         <>
             <div className="footer-main">
                 <div className="footer-left">
-                    <img style={{ maxWidth: "400px", padding: "0" }} src="https://i.imgur.com/JqR9x68.png"></img>
+                    <img style={{ maxWidth: "300px", padding: "0" }} src="https://i.imgur.com/2VtxfeY.png"></img>
 
                 </div>
                 <div className="footer-right">
@@ -13,7 +13,7 @@ function Footer() {
                 </div>
             </div>
             <div style={{ backgroundColor: "black", color: "white", padding: "25px 10px" }}>
-                Copyright © 2025. Sami PC Builds. All rights reserved.
+                Copyright © 2025. PrimeTech. All rights reserved.
 
             </div>
         </>
