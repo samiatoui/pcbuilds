@@ -31,9 +31,23 @@ const ProductList = () => {
     const handleEdit = (productId) => {
         setEditingProductId(productId);
         const productToEdit = products.find(product => product.product_id === productId);
-        setEditedProduct({ ...productToEdit });
+        
+        // Ensure all fields have default values
+        setEditedProduct({
+            name: productToEdit.name || "",
+            description: productToEdit.description || "",
+            price: productToEdit.price || 0,
+            stock_quantity: productToEdit.stock_quantity || 0,
+            product_level: productToEdit.product_level || "",
+            cpu: productToEdit.cpu || "",
+            gpu: productToEdit.gpu || "",
+            img_url_1: productToEdit.img_url_1 || "",
+            img_url_2: productToEdit.img_url_2 || "",
+            img_url_3: productToEdit.img_url_3 || "",
+            img_url_4: productToEdit.img_url_4 || "",
+            product_id: productToEdit.product_id,
+        });
     };
-
     // Handle input changes while editing
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -102,6 +116,8 @@ const ProductList = () => {
                             <th>Stock Quantity</th>
                             <th>Images</th>
                             <th>Level</th>
+                            <th>CPU</th>
+                            <th>GPU</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -208,7 +224,30 @@ const ProductList = () => {
                                         product.product_level || "Not Set" // Show "Not Set" if null
                                     )}
                                 </td>
-
+                                <td>
+                                    {editingProductId === product.product_id ? (
+                                        <input
+                                            type="text"
+                                            name="cpu"
+                                            value={editedProduct.cpu}
+                                            onChange={handleChange}
+                                        />
+                                    ) : (
+                                        product.cpu
+                                    )}
+                                </td>
+                                <td>
+                                    {editingProductId === product.product_id ? (
+                                        <input
+                                            type="text"
+                                            name="gpu"
+                                            value={editedProduct.gpu}
+                                            onChange={handleChange}
+                                        />
+                                    ) : (
+                                        product.gpu
+                                    )}
+                                </td>
 
                                 <td>
                                     {editingProductId === product.product_id ? (
@@ -220,6 +259,8 @@ const ProductList = () => {
                                         <button onClick={() => handleEdit(product.product_id)}>Modify</button>
                                     )}
                                 </td>
+
+                               
                             </tr>
                         ))}
                     </tbody>
