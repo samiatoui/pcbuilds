@@ -16,6 +16,7 @@ function App() {
       <div>
         <Header />
       </div>
+      <main>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="prebuilts" element={<Prebuilts />} />
@@ -26,6 +27,7 @@ function App() {
         <Route path="/checkout"  element={<AddToCart />} />
 
       </Routes>
+      </main>
       <footer>
         <Footer />
       </footer>

@@ -1,38 +1,36 @@
 import { Link } from "react-router-dom";
 function Home() {
-    return (
-        <>
-            <div className="banner">
-                <div className="bannercontent">
-                    <h1>PrimeTech</h1>
-                    <h3>Computer builds and tech repairs</h3>
-                </div>
+  return (
+    <div className="home-services">
+      <div className="services-container">
+        <div
+          style={{
+            maxWidth: "500px",
+            textAlign: "left",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+          }}
+        >
+          <h1>Computer Build and Tech Repair Services in Winnipeg</h1>
+          <div className="services-sec">
+            <Link to="prebuilts">
+              <div className="service-item-inv">
+                <strong>PC Builds</strong>
+              </div>
+            </Link>
 
-            </div>
+            <Link to="services">
+              <div className="service-item">
+                <strong>Repair Services</strong>
+              </div>
+            </Link>
+          </div>
+        </div>
 
-
-            <h1>Computer Build and Tech Repair Services in Winnipeg</h1>
-            <div className="services-sec">
-                <div className="service-item">
-                    SHOP
-                    <Link to="prebuilts">
-                        <h2>PC Builds</h2>
-                    </Link>
-
-
-                </div>
-                <div className="service-item">
-                    DISCOVER
-                    <Link to="services">
-                        <h2>Repair Services</h2>
-                    </Link>
-                   
-                </div>
-
-            </div>
-
-        </>
-    );
+        <div className="home-div2"></div>
+      </div>
+    </div>
+  );
 }
 
 export default Home;

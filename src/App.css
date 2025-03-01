@@ -4,28 +4,47 @@
   width: 100%;
 }
 
-.pagetitle{
+.pagetitle {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 50px;
+  padding: 50px 50px;
   text-align: left;
+  padding-bottom: '25px'
 }
 
-.product-info{
+.contact-a {
+  color: var(--accent-colorflat) !important;
+
+}
+
+.contact-a a:visited {
+  color: var(--accent-colorflat) !important;
+
+}
+
+.contact-a a:hover {
+  color: black !important;
+}
+
+.product-info {
   padding: 25px 50px;
   text-align: left;
   min-width: 300px;
   max-width: 500px;
+  font-family: "Geo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
 }
 
-.disclaimer{
+.disclaimer {
   background-color: rgb(98, 208, 255);
   padding: 25px 50px;
   font-weight: bold;
   margin: 25px auto;
 }
 
-.product-img img{
+.product-img img {
   max-width: 300px;
   padding: 25px 50px;
 }
@@ -83,6 +102,7 @@ a:hover {
   align-items: center;
   color: var(--header-text);
   position: relative;
+  margin-bottom: 50px;
 }
 
 .header-content {
@@ -150,28 +170,76 @@ a:hover {
   color: var(--header-text);
 }
 
-.desktop-menu ul li a:hover{
+.desktop-menu ul li a:hover {
   color: var(--accent-colorflat) !important;
 
 }
+
 .services-sec {
   display: flex;
-  justify-content: center;
-  margin: 50px auto;
   text-align: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .service-item {
   max-width: 600px;
-  padding: 20px 25px;
-  background: var(--accent-color);
+  padding: 05px 20px;
+  border-radius: 9999px;
+  color: var(--accent-colorflat);
+  border: 1px solid var(--accent-colorflat);
+}
+
+.service-item:hover {
   color: white;
-  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+}
+
+.service-item-inv {
+  max-width: 600px;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 9999px;
+  border: 1px solid var(--accent-colorflat);
+  background-color: var(--accent-colorflat);
+  margin-bottom: 20px;
+}
+
+.service-item-inv:hover {
+  color: var(--accent-colorflat);
+  border: 1px solid white;
+  background-color: white;
+}
+
+.home-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 500px;
+  background:
+    linear-gradient(to right, rgb(9, 9, 9) 20%, rgba(255, 255, 255, 0) 100%),
+    url("https://imgs.search.brave.com/CvqcLtF7AsCqlYUUHvVz0duXTGhyOFoP-oY3GIcwNOQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDg0NTA0/MzAuanBn");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-services > div:first-child {
+  max-width: 500px;
+  text-align: left; /* Ensures text is aligned left */
+  flex: 1; /* Allows the div to grow while keeping its content left-aligned */
+  margin: 0 auto;
+}
+
+.home-div2 {
+  flex: 1; /* Ensures the right div takes up equal space */
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 button {
-  background: var(--accent-color);
+  background: var(--accent-colorflat);
   color: white;
   padding: 10px 25px;
   border: none;
@@ -179,8 +247,8 @@ button {
   font-size: 18px;
 }
 
-.addtocart{
-  background: var(--accent-color);
+.addtocart {
+  background: var(--accent-colorflat);
   color: white;
   border: none;
   padding: 10px 25px;
@@ -188,31 +256,19 @@ button {
   font-size: 18px;
 }
 
-.addtocart:hover, button:hover{
+.addtocart:hover,
+button:hover {
   color: var(--accent-colorflat);
+  background-color: white;
 
 }
 
 
-.addtocart a{
+.addtocart a {
   color: white !important;
 }
 
-.banner {
-  background-color: var(--accent-colorflat);
-  margin-bottom: 50px;
-  background-image: url('https://i.imgur.com/mc1QnOd.jpeg');
-  background-size: cover;
-  background-position: center;
-  min-height: 300px;
-}
 
-.bannercontent {
-  color: white;
-  margin: 0 auto;
-  padding: 100px 60px;
-
-}
 
 .bannerv2 {
   display: flex;
@@ -268,10 +324,14 @@ button {
   max-width: 80%;
   margin: 0 auto;
   align-items: center;
+
 }
 
 footer {
-  background-color: rgb(23, 23, 23);
+  background-color: rgb(17, 17, 17);
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-left {
@@ -280,10 +340,12 @@ footer {
 
 .cart-container {
   max-width: 1200px;
-  margin: 50px auto;
+  margin: 0px auto;
   display: flex;
   justify-content: center;
   gap: 50px;
+  color: black;
+  padding: 50px 0px;
 }
 
 .cart-form {
@@ -376,11 +438,6 @@ footer {
 
   }
 
-  .service-item {
-    max-width: 60%;
-    padding: 10px 25px;
-    margin: 25px auto;
-  }
 
   .header-content {
     padding-left: 10px;
@@ -436,4 +493,10 @@ footer {
     /* Hide hamburger icon */
 
   }
+}
+
+main {
+  background-color: rgb(25, 25, 25);
+  margin-top: -50px;
+  color: white;
 }

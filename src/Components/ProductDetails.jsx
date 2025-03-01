@@ -45,7 +45,7 @@ const ProductDetail = () => {
     if (!product) return <p>Product not found</p>;
 
     return (
-        <div style={{ justifyContent: 'center', textAlign: 'center', display: 'flex', marginTop: '50px', marginBottom: '50px', gap: '2rem' }}>
+        <div style={{ justifyContent: 'center', textAlign: 'center', display: 'flex', marginTop: '50px', paddingBottom: '50px', gap: '2rem' }}>
             <div className='product-img'>
                 {product.img_url_1 && <img src={product.img_url_1} alt={product.name} />}
 

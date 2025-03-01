@@ -32,6 +32,7 @@ const Product = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
+    <>
     <div
       style={{
         display: "flex",
@@ -47,45 +48,52 @@ const Product = () => {
         <p>No products available</p>
       ) : (
         products.map((product) => (
-          <Link
-            style={{ color: "black" }}
-            to={`/prebuilts/${product.product_id}`}
+          <div
+            key={product.product_id}
+            style={{
+              padding: "30px 30px",
+              textAlign: "left",
+              color: "white",
+              border: ".5px solid rgb(25,25,25)",
+              backgroundColor: "rgb(30,30,30)",
+              borderRadius: "7px",
+            }}
           >
-            <div
-              key={product.product_id}
-              style={{ padding: "25px", textAlign: "left" }}
-            >
-              <img
-                src={product.img_url_1}
-                alt={product.name}
-                style={{ width: "200px", objectFit: "cover" }}
-              />
-              <div
-                className="pc-spec"
-                style={{
-                  backgroundColor: "var(--accent-colorflat)",
-                  color: "white",
-                  padding: "0px 2px",
-                  fontSize: "14px",
-                  fontWeight: "bold",
-                  textAlign: "center",
-                  marginBottom: "-20px",
-                }}
-              >
-                <p>
-                  {product.cpu} + {product.gpu}
-                </p>
-              </div>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <h3 style={{ fontSize: "16px" }}>{product.name}</h3>
-
-                <p>${product.price}</p>
-              </div>
+            <img
+              src={product.img_url_1}
+              alt={product.name}
+              style={{ width: "200px", objectFit: "cover" }}
+            />
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <h3 style={{ fontSize: "16px" }}>{product.name}</h3>
+              <p>${product.price}</p>
             </div>
-          </Link>
+            <div
+              className="pc-spec"
+              style={{
+                backgroundColor: "var(--accent-colorflat)",
+                color: "white",
+                padding: "0px 2px",
+                fontSize: "14px",
+                fontWeight: "bold",
+                textAlign: "center",
+                marginTop: "-20px",
+              }}
+            >
+              <p>{product.product_level}</p>
+            </div>
+            <Link style={{ color: "black" }}to={`/prebuilts/${product.product_id}`}>
+              <div style={{display:'flex',justifyContent:'center', color:"white", border: 'solid .5px  white', width: '100%', }}><p>View PC</p></div>
+            </Link>
+          </div>
+         
         ))
+        
       )}
+      
     </div>
+    
+    </>
   );
 };
 
