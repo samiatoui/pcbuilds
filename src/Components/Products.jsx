@@ -39,9 +39,9 @@ const Product = () => {
         justifyContent: "center",
         gap: "2rem",
         marginBottom: "50px",
+        marginTop:"50px",
         maxWidth: "1200px",
         flexWrap: "wrap",
-        lineHeight: "18px",
       }}
     >
       {products.length === 0 ? (
@@ -54,9 +54,11 @@ const Product = () => {
               padding: "30px 30px",
               textAlign: "left",
               color: "white",
-              border: ".5px solid rgb(25,25,25)",
-              backgroundColor: "rgb(30,30,30)",
+              border: ".5px solid rgb(16, 15, 15)",
+              backgroundColor: "rgb(18, 18, 18)",
               borderRadius: "7px",
+              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)", // Soft shadow
+              maxWidth:'500px'
             }}
           >
             <img

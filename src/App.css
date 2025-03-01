@@ -38,10 +38,11 @@
 }
 
 .disclaimer {
-  background-color: rgb(98, 208, 255);
+  background-color: var(--accent-colorflat);
   padding: 25px 50px;
   font-weight: bold;
-  margin: 25px auto;
+  margin: 50px auto;
+
 }
 
 .product-img img {

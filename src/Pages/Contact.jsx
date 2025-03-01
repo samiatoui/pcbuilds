@@ -2,10 +2,17 @@ function Contact() {
   return (
     <div className="pagetitle">
       <h1>Contact Us</h1>
-      <h3>For all inquiries, please call us at (204) 997-7121</h3>
-      <h3> You may also email us at primetechwpg@gmail.com</h3>
-      <h3> Follow us on <a className="contact-a" href='https://instagram.com/primetech_wpg'>Instagram</a>.</h3>
-
+      <div style={{ marginTop: "50px" }}>
+        <h3>For all inquiries, please call us at (204) 997-7121</h3>
+        <h3> You may also email us at primetechwpg@gmail.com</h3>
+        <h3>
+          Follow us on{" "}
+          <a className="contact-a" href="https://instagram.com/primetech_wpg">
+            Instagram
+          </a>
+          .
+        </h3>
+      </div>
       <div className="disclaimer">
         <p>We do not have a storefront.</p>
         <p>
