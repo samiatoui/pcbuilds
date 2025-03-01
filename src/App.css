@@ -12,15 +12,17 @@
 }
 
 .product-info{
-  background-color: #e4e4e4;
   padding: 25px 50px;
   text-align: left;
   min-width: 300px;
   max-width: 500px;
 }
 
-.product-img{
-  background-color: #e4e4e4;
+.disclaimer{
+  background-color: rgb(98, 208, 255);
+  padding: 25px 50px;
+  font-weight: bold;
+  margin: 25px auto;
 }
 
 .product-img img{
